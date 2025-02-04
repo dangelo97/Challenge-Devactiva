@@ -1,15 +1,22 @@
-exports.LoginPage = class LoginPage{
-    constructor(page){
+exports.LoginPage = class LoginPage {
+    constructor(page) {
         this.page = page;
-        this.ingresarButton = page.locator('#login-button');
-        this.registrarseButton = page.locator('#register-link');
+        this.loginButton = page.locator('#login');
+        this.usernameField = page.locator('#userName');
+        this.passwordField = page.locator('#password');
     }
 
-    async clickIngresar(){
-        await this.ingresarButton.click()
+    async clickLogin() {
+        await this.loginButton.click({ force: true });
     }
 
-    async clickRegistrarse(){
-        await this.registrarseButton.click()
+    async ingresoUsername(nombre) {
+        await this.usernameField.click();
+        await this.usernameField.fill(nombre)
+    }
+
+    async ingresoPassword(nombre) {
+        await this.passwordField.click();
+        await this.passwordField.fill(nombre)
     }
 }
