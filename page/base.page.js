@@ -11,5 +11,4 @@ export class BasePage {
         console.log("baseUrl" + this.baseUrl)
         await this.page.goto(this.baseUrl);
     }
-
 }

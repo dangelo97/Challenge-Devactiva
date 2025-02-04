@@ -19,4 +19,5 @@ exports.LoginPage = class LoginPage {
         await this.passwordField.click();
         await this.passwordField.fill(nombre)
     }
+    
 }

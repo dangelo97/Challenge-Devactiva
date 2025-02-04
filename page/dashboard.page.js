@@ -9,6 +9,5 @@ exports.DashboardPage = class DashboardPage {
   async validacionNombreUsuario(text) {
     await expect(this.userNameText).toContainText(text);
   }
-
 }
 
